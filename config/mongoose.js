@@ -1,6 +1,6 @@
 // require the library
 const mongoose = require('mongoose');
-let mongo_url = 'mongodb+srv://admin:rootroot@cluster0.fejisml.mongodb.net/Tasks?retryWrites=true&w=majority' || 'mongodb://localhost:27017/'
+let mongo_url = process.env.mongo_url || 'mongodb://localhost:27017/'
 // connect to the database
 mongoose.connect(mongo_url);
 console.log(mongo_url)
