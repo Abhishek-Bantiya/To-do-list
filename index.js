@@ -2,7 +2,7 @@
 const express = require('express');
 
 // set up the port number
-const port = 7000;
+const port = 3000;
 
 // importing the DataBase
 const db = require('./config/mongoose');
@@ -51,7 +51,7 @@ app.post('/create-task', function(req, res){
         if(err){console.log('error in creating task', err); return;}
         
 
-        //console.log(newtask);
+        console.log(newtask);
         return res.redirect('back');
 
     });
