@@ -1,9 +1,13 @@
 // require the library
+require('dotenv').config();
+
 const mongoose = require('mongoose');
-let mongo_url = process.env.mongo_url || 'mongodb://localhost:27017/'
+// let mongo_url = process.env.mongourl || 'mongodb://localhost:27017/'
+const mongo_url = process.env.mongourl
 // connect to the database
-mongoose.connect(mongo_url);
 console.log(mongo_url)
+mongoose.connect(mongo_url);
+
 // aquire the connection (to check if it is successful)
 const db = mongoose.connection;
 
